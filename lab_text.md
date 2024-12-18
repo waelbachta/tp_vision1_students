@@ -33,7 +33,6 @@ Afin de vous familiariser avec ce script, commencez par le lancer. En faisant ce
 - Le gain choisi pour l’asservissement visuel ($\lambda$)
 
 
-
 Veuillez noter que les paramètres réels du robot ne finissent pas par $_e$. Ils sont différents de ceux que l'on va estimer et qui finissent par $_e$.
 
 Dans un premier temps, ne modifiez pas les paramètres déjà saisis, qui correspondent à une estimation parfaite et définissent la « vérité terrain ». 
@@ -54,7 +53,13 @@ Comme l’asservissement rien ne se passera même si vous utilisez l'interface q
 
 5. En considérant maintenant les paramètres estimés, donner l'expression de la loi de commande par vision $\widetilde{^{C}{\cal T}_{c/0}^{C}}$ en fonction de l'erreur dans l'image
 
-6. Au final nous allons contrôler $^{0}{\cal T}_{n/0}^{On}$. Exprimer  de $\widetilde{^{0}{\cal T}_{n/0}^{On}}$ en prenant en compte les hypothèses simplificatrices.
+6. Au final nous allons contrôler 
+
+$$
+^{0}{\cal T}_{n/0}^{On}
+$$
+
+Exprimer ce torseur de vitesse en prenant en compte les hypothèses simplificatrices.
 
 7. Donner la formule du vecteur de consignes de vitesses articulaires à envoyer aux variateurs des axes du robot.
 
@@ -88,7 +93,7 @@ les valeurs de $k_{xe}$ et $k_{ye}$.  Mesurer la constante de temps de la répon
 ### Simulation de l'effet d’une erreur sur les paramètres extrinsèques
 Dans cette partie, nous utiliserons les valeurs exactes des paramètres intrinsèques estimés. Nous utiliserons un gain $\lambda=5$.
 
-Nous allons de plus considérer que la valeur exacte de $R_{cn}$ est $\mathbb{I}_2$. Pour $\widehat{R_{nc}}$, nous considérerons un décalage d'un angle $\phi$ autour de l'axe $\vec{z_n}$.
+Nous allons de plus considérer que la valeur exacte de $R_ {cn}$ est $\mathbb{I}_ 2$. Pour $\widehat{R_ {nc}}$, nous considérerons un décalage d'un angle $\phi$ autour de l'axe $\vec{z_n}$.
 
 1. Fixer successivement la valeur de $\phi$ à 15, 40 et 70 degrés.
 2. Observer et commenter le comportement de l'asservissement visuel. Tracer un schéma en 2D expliquant ce que vous remarquez.
